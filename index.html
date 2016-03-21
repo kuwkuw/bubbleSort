@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Bubble Sort</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body class="container">
+	<div class="algoritm-info-wrp">
+		<h1>Bubble sort</h1>
+		<p>
+			<strong>Bubble sort</strong>, sometimes referred to as <strong>sinking sort</strong>, is a simple sorting algorithm that repeatedly steps through the list to be sorted, compares each pair of adjacent items and swaps them if they are in the wrong order. The pass through the list is repeated until no swaps are needed, which indicates that the list is sorted. The algorithm, which is a comparison sort, is named for the way smaller elements "bubble" to the top of the list. Although the algorithm is simple, it is too slow and impractical for most problems even when compared to insertion sort. It can be practical if the input is usually in sort order but may occasionally have some out-of-order elements nearly in position.
+		</p>
+		<h3>Step-by-step example</h3>
+		<p>
+			Let us take the array of numbers "5 1 4 2 8", and sort the array from lowest number to greatest number using bubble sort. In each step, elements written in bold are being compared. Three passes will be required.
+		</p>
+		<h4>First Pass</h4>
+		<p>
+			( <b>5 1</b> 4 2 8 ) 
+			<img alt="\to" src="https://upload.wikimedia.org/math/d/a/5/da558173e1f2ddfeb273751d481f9a52.png"> 
+			( <b>1 5</b> 4 2 8 ), 
+			Here, algorithm compares the first two elements, and swaps since 5 > 1.<br/>
+			( 1 <b>5 4</b> 5 4 2 8 ) 
+			<img alt="\to" src="https://upload.wikimedia.org/math/d/a/5/da558173e1f2ddfeb273751d481f9a52.png"> 
+			( 1 <b>4 5</b> 2 8 ), 
+			Swap since 5 > 4<br/>
+			( 1 4 <b>5 2</b> 8 ) 
+			<img alt="\to" src="https://upload.wikimedia.org/math/d/a/5/da558173e1f2ddfeb273751d481f9a52.png"> 
+			( 1 4 <b>2 5</b> 8 ), 
+			Swap since 5 > 2<br/>
+			( 1 4 2 <b>5 8</b> )
+			 <img alt="\to" src="https://upload.wikimedia.org/math/d/a/5/da558173e1f2ddfeb273751d481f9a52.png"> ( 1 4 2 <b>5 8</b> ), 
+			 Now, since these elements are already in order (8 > 5), algorithm does not swap them
+		</p>
+		<h4>Second Pass</h4>
+		<p>
+			( <b>1 4</b> 2 5 8 ) 
+			<img alt="\to" src="https://upload.wikimedia.org/math/d/a/5/da558173e1f2ddfeb273751d481f9a52.png"> 
+			( <b>1 4</b> 2 5 8 )<br/>
+			( 1 <b>4 2</b> 5 8 ) 
+			<img alt="\to" src="https://upload.wikimedia.org/math/d/a/5/da558173e1f2ddfeb273751d481f9a52.png">  ( 1 <b>2 4</b> 5 8 ), 
+			Swap since 4 > 2<br/>
+			( 1 2 <b>4 5</b> 8 ) 
+			<img alt="\to" src="https://upload.wikimedia.org/math/d/a/5/da558173e1f2ddfeb273751d481f9a52.png">  ( 1 2 <b>4 5</b> 8 )<br/>
+			( 1 2 4 <b>5 8</b> ) 
+			<img alt="\to" src="https://upload.wikimedia.org/math/d/a/5/da558173e1f2ddfeb273751d481f9a52.png">  ( 1 2 4 <b>5 8</b> )<br/>
+			Now, the array is already sorted, but the algorithm does not know if it is completed. The algorithm needs one whole pass without any swap to know it is sorted.
+		</p>
+		<h4>Third Pass</h4>
+		<p>
+			( <b>1 4</b> 2 5 8 ) 
+			<img alt="\to" src="https://upload.wikimedia.org/math/d/a/5/da558173e1f2ddfeb273751d481f9a52.png">  ( <b>1 4</b> 2 5 8 )<br/>
+			( 1 <b>2 4</b> 5 8 )
+			<img alt="\to" src="https://upload.wikimedia.org/math/d/a/5/da558173e1f2ddfeb273751d481f9a52.png">  ( 1 <b>2 4</b> 5 8 )<br/>
+			( 1 2 <b>4 5</b> 8 ) 
+			<img alt="\to" src="https://upload.wikimedia.org/math/d/a/5/da558173e1f2ddfeb273751d481f9a52.png">  ( 1 2 <b>4 5</b> 8 )<br/>
+			( 1 2 4 <b>5 8</b> )
+			<img alt="\to" src="https://upload.wikimedia.org/math/d/a/5/da558173e1f2ddfeb273751d481f9a52.png">  ( 1 2 4 <b>5 8</b> )
+		</p>
+	</div>
+	<div id="algoritm-widget">
+		<h3>Bubble sorting exemple</h3>
+		<!-- <div>
+			<input ib="num-input" type="number"/>
+			<input id="add-num-in-array-btn" type="button" value="add number to array">
+		</div> -->
+		<!-- <div id="unsort-array-wrp">
+			<ul id="unsort-array">
+				<li class="array-element"></li>
+			</ul>
+		</div> -->
+		
+	</div>
+	<script src="scripts/bubbleSort.js"></script>
+	<script src="scripts/sortingWidget.js"></script>
+	<script src="scripts/main.js"></script>
+</body>
+</html>
